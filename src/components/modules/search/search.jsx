@@ -110,16 +110,12 @@ export class Search extends React.Component {
     }
 
     onChange(e) {
-        this.setState({
-            focus: e.target.value !== ''
-        });
-
         this.props.onChange(e);
     }
 
     onFocus(e) {
         this.setState({
-            focus: e.target.value !== ''
+            focus: true
         });
     }
 
