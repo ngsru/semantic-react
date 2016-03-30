@@ -5,8 +5,8 @@ import classNames from 'classnames';
 
 function getClasses(props) {
     let classes = {
-        disabled: props.state === 'disabled',
-        error: props.state === 'error',
+        disabled: props.disabled,
+        error: props.error,
 
         required: props.required,
         inline: props.inline,
@@ -60,10 +60,8 @@ Field.propTypes = {
     inline: React.PropTypes.bool,
     label: React.PropTypes.string,
     required: React.PropTypes.bool,
-    state: React.PropTypes.oneOf([
-        'disabled',
-        'error'
-    ]),
+    disabled: React.PropTypes.bool,
+    error: React.PropTypes.bool,
     width: React.PropTypes.number
 }
 
