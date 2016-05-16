@@ -1237,7 +1237,7 @@ export class DropdownMenu extends React.Component<DropdownMenuProps, any> {
 
 // <Option />
 export interface OptionProps extends ItemProps {
-    value: string;
+    value: string|number;
     selected?: boolean;
 }
 export class Option extends React.Component<OptionProps, any> {
@@ -1438,6 +1438,14 @@ export interface AccordionProps extends BaseProps<Accordion> {
      * A styled accordion adds basic formatting
      */
     styled?: boolean;
+    /**
+     * Enter animations transforms
+     */
+    enterAnimation?: any;
+    /**
+     * Leave animation
+     */
+    leaveAnimation?: any;
     /**
      * Callback when accordion wants to be changed
      */
