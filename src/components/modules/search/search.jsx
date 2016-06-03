@@ -6,6 +6,12 @@ import Icon from './../../elements/icon/icon';
 import Results from './results';
 import DefaultProps from '../../defaultProps';
 
+const KEYS = {
+    upArrow: 38,
+    downArrow: 40,
+    enter: 13
+};
+
 /*
 3 support results types:
 
@@ -134,8 +140,8 @@ export default class Search extends React.Component {
         
 
         // ArrowDown
-        if (e.keyCode === 40) {
-            event.preventDefault();
+        if (e.keyCode === KEYS.downArrow) {
+            e.preventDefault();
 
             if (indexFocusItem !== lengthResults) {
                 this.setState({
@@ -145,8 +151,8 @@ export default class Search extends React.Component {
         }
 
         // ArrowUp
-        if (e.keyCode === 38) {
-            event.preventDefault();
+        if (e.keyCode === KEYS.upArrow) {
+            e.preventDefault();
 
             if (indexFocusItem >= 1) {
                 this.setState({
@@ -156,7 +162,7 @@ export default class Search extends React.Component {
         }
 
         // Enter
-        if (e.keyCode === 13) {
+        if (e.keyCode === KEYS.enter) {
             let child = results[indexFocusItem];
 
             if (typeof child !== 'undefined') {
@@ -172,8 +178,8 @@ export default class Search extends React.Component {
         let categoriesLength = categories.length - 1;
 
         // ArrowDown
-        if (e.keyCode === 40) {
-            event.preventDefault();
+        if (e.keyCode === KEYS.downArrow) {
+            e.preventDefault();
 
             if (indexFocusCategory === null) {
                 this.setState({
@@ -206,8 +212,8 @@ export default class Search extends React.Component {
         }
 
         // ArrowUp
-        if (e.keyCode === 38) {
-            event.preventDefault();
+        if (e.keyCode === KEYS.upArrow) {
+            e.preventDefault();
 
             if (indexFocusCategory === null) {
                 this.setState({
@@ -238,7 +244,7 @@ export default class Search extends React.Component {
         }
 
         // Enter
-        if (e.keyCode === 13) {
+        if (e.keyCode === KEYS.enter) {
             let child = results[categories[indexFocusCategory]][indexFocusItem];
 
             if (typeof child !== 'undefined') {
