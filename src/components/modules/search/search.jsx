@@ -141,11 +141,7 @@ export default class Search extends React.Component {
         
 
         // ArrowDown
-<<<<<<< HEAD
-        if (e.keyCode === KEYS.upArrow) {
-=======
         if (e.keyCode === KEYS.downArrow) {
->>>>>>> bbc659f... fix-search-preventDefault
             e.preventDefault();
 
             if (indexFocusItem !== lengthResults) {
@@ -156,11 +152,7 @@ export default class Search extends React.Component {
         }
 
         // ArrowUp
-<<<<<<< HEAD
-        if (e.keyCode === KEYS.downArrow) {
-=======
         if (e.keyCode === KEYS.upArrow) {
->>>>>>> bbc659f... fix-search-preventDefault
             e.preventDefault();
 
             if (indexFocusItem >= 1) {
@@ -187,11 +179,7 @@ export default class Search extends React.Component {
         let categoriesLength = categories.length - 1;
 
         // ArrowDown
-<<<<<<< HEAD
-        if (e.keyCode === KEYS.upArrow) {
-=======
         if (e.keyCode === KEYS.downArrow) {
->>>>>>> bbc659f... fix-search-preventDefault
             e.preventDefault();
 
             if (indexFocusCategory === null) {
@@ -225,11 +213,7 @@ export default class Search extends React.Component {
         }
 
         // ArrowUp
-<<<<<<< HEAD
-        if (e.keyCode === KEYS.downArrow) {
-=======
         if (e.keyCode === KEYS.upArrow) {
->>>>>>> bbc659f... fix-search-preventDefault
             e.preventDefault();
 
             if (indexFocusCategory === null) {
