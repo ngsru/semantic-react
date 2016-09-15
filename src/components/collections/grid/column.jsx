@@ -82,7 +82,7 @@ export default class Column extends React.Component {
         /* eslint-disable no-use-before-define */
         let {
             aligned, component, children, defaultClasses, floated, only, width, mobileWidth, tabletWidth,
-            computerWidth, largeScreenWidth, wideScreenWidth, valigned, ...other
+            computerWidth, largeScreenWidth, wideScreenWidth, valigned, wide, ...other
         } = this.props;
         /* eslint-enable no-use-before-define */
         let Component = component;

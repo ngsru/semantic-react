@@ -26,7 +26,7 @@ export default class AccordionBody extends React.Component {
 
     render() {
         const {
-            component, children, defaultClasses, active, style, ...other
+            component, children, defaultClasses, active, style, dimensions, ...other
         } = this.props;
         const Component = component;
         other.className = classNames(other.className, {
@@ -45,7 +45,6 @@ export default class AccordionBody extends React.Component {
             }
         }
         // smooth transition
-        const { dimensions } = this.props;
         if (dimensions && dimensions.height - style.height < 2) {
             delete newStyle.height;
         }
