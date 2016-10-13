@@ -57,7 +57,7 @@ export default class AccordionTitle extends React.Component {
 
     render() {
         const {
-            component, children, defaultClasses, active, icon, iconComponent, index, initialStyle, onClick, ...other
+            component, children, defaultClasses, active, icon, iconComponent, index, initialStyle, onClick, dimensions, ...other
         } = this.props;
         const Component = component;
         const IconComponent = iconComponent || AccordionTitle.Components.Icon;

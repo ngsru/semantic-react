@@ -123,7 +123,7 @@ export default class Dimmer extends React.Component {
     
     render() {
         /* eslint-disable no-use-before-define */
-        let { active, children, component, enterAnimation, leaveAnimation, page, inverted, ...other } = this.props;
+        let { active, children, component, enterAnimation, leaveAnimation, page, inverted, defaultClasses, noWrapChildren, closePortal, ...other } = this.props;
         /* eslint-enable no-use-before-define */
         
         let Component = component;

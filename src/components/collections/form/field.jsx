@@ -49,7 +49,7 @@ export default class Field extends React.Component {
 
     render() {
         /* eslint-disable no-use-before-define */
-        let { children, className, component, label, width, ...other } = this.props;
+        let { children, className, component, label, width, wide, defaultClasses, state, inline, ...other } = this.props;
         /* eslint-enable no-use-before-define */
         other.className = classNames(className, this.getClasses());
 

@@ -104,7 +104,7 @@ export default class Button extends React.Component {
         // consume this.props
         let { animated, attached, basic, children, circular, color, component,
             compact, defaultClasses, emphasis, floated, fluid,
-            inverted, size, state, toggle,
+            inverted, size, state, toggle, labeled, loading,
             ...other
         } = this.props;
 

@@ -170,7 +170,7 @@ export default class Modal extends React.Component {
 
         const { 
             component, enterAnimation, leaveAnimation, children, dimmed, onOutsideClick, style, zIndex, 
-            onModalOpened, onModalClosed, ...other 
+            onModalOpened, onModalClosed, onRequestClose, ...other
         } = this.props;
 
         // Apply layer to portal to prevent clicking outside

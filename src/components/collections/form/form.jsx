@@ -33,7 +33,7 @@ export default class Form extends React.Component {
 
     render() {
         /* eslint-disable no-use-before-define */
-        let { children, className, component, ...other } = this.props;
+        let { children, className, component, defaultClasses, loading, state, ...other } = this.props;
         /* eslint-enable no-use-before-define */
         other.className = classNames(className, this.getClasses());
 

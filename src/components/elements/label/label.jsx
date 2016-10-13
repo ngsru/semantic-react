@@ -103,7 +103,7 @@ export default class Label extends React.Component {
     render() {
         const {
             component, children, defaultClasses, attached, basic, circular, color, corner, empty, floating,
-            horizontal, image, link, pointing, ribbon, size, tag, ...other
+            horizontal, image, link, pointing, ribbon, size, tag, prompt, ...other
         } = this.props;
         let Component = this.getComponent();
 
