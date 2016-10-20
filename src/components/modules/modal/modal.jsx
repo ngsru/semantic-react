@@ -147,6 +147,11 @@ export default class Modal extends React.Component {
         if (!this.modal) {
             return;
         }
+
+        if ((event.target.classList.contains('dimmer')) && (event.x > event.target.clientWidth)) {
+            return;
+        }
+
         if (isNodeInRoot(event.target, ReactDOM.findDOMNode(this.modal))) {
             return;
         }
