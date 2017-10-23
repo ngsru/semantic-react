@@ -212,7 +212,7 @@ export default class Popup extends React.Component {
                                onResize={this.handleResize}
                                onScroll={this.handleScroll}
                 >
-                    <EventListener target={document}
+                    <EventListener target={typeof window === 'object' ? document : null}
                                    onMouseDown={this.onOutsideClick.bind(this)}
                                    onTouchStart={this.onOutsideClick.bind(this)}
                     >

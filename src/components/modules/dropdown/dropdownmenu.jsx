@@ -209,7 +209,7 @@ export default class DropdownMenu extends React.Component {
                 active={active}
             >
                 {/* This will embed <noscript></noscript> inside dropdown div. Shouldn't cause any problems */}
-                    <EventListener target={document}
+                    <EventListener target={typeof window === 'object' ? document : null}
                                    capture
                                    onMouseDown={this.onOutsideDropdownClick}
                                    onTouchStart={this.onOutsideDropdownClick}/>
