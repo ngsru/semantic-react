@@ -7,6 +7,7 @@ import throttle from 'lodash.throttle';
 import shallowCompare from 'react-addons-shallow-compare';
 import PopupElement, { POSITIONS } from './popupelement';
 import { isNodeInRoot } from '../../utilities';
+import isBrowser from '../../is-browser';
 
 /**
  * Popup with animations
@@ -212,7 +213,7 @@ export default class Popup extends React.Component {
                                onResize={this.handleResize}
                                onScroll={this.handleScroll}
                 >
-                    <EventListener target={document}
+                    <EventListener target={isBrowser ? document : null}
                                    onMouseDown={this.onOutsideClick.bind(this)}
                                    onTouchStart={this.onOutsideClick.bind(this)}
                     >
