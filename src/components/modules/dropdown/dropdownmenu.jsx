@@ -10,6 +10,7 @@ import DropdownElement from './dropdownelement';
 import Icon from './../../elements/icon/icon';
 import Text from './../../elements/simple/text';
 import Menu from './../../views/menu/menu';
+import isBrowser from '../../is-browser';
 
 /**
  * Dropdown menu with animations
@@ -209,7 +210,7 @@ export default class DropdownMenu extends React.Component {
                 active={active}
             >
                 {/* This will embed <noscript></noscript> inside dropdown div. Shouldn't cause any problems */}
-                    <EventListener target={document}
+                    <EventListener target={isBrowser ? document : null}
                                    capture
                                    onMouseDown={this.onOutsideDropdownClick}
                                    onTouchStart={this.onOutsideDropdownClick}/>
